@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Knight Adventure</title>
+
+<style>
+body{
+background:#111;
+color:white;
+font-family:Arial;
+text-align:center;
+}
+
+.slider img{
+width:700px;
+max-width:90%;
+height:400px;
+object-fit:cover;
+border-radius:10px;
+}
+
+button{
+background:#e6a000;
+border:none;
+padding:12px 40px;
+font-size:20px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.buy{
+margin-top:30px;
+}
+
+a{
+color:#00ffcc;
+font-size:18px;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<h1>Knight Adventure</h1>
+
+<div class="slider">
+
+<img id="slide" src="k1.jpg">
+
+</div>
+
+
+<script>
+
+let slike=[
+"k1.jpg",
+"k2.jpg",
+"k3.jpg",
+"k4.jpg",
+"k5.jpg"
+];
+
+let i=0;
+
+setInterval(function(){
+
+i++;
+
+if(i>=slike.length){
+i=0;
+}
+
+document.getElementById("slide").src=slike[i];
+
+},3000);
+
+</script>
+
+
+<div class="buy">
+
+<a href="https://marko123456.itch.io/knightrunner">
+<button>BUY GAME</button>
+</a>
+
+</div>
+
+
+<br><br>
+
+<a href="index.html">Back to games</a>
+
+
+</body>
+</html>

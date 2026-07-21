@@ -20,6 +20,15 @@ object-fit:cover;
 border-radius:10px;
 }
 
+video{
+    width:300px;
+    max-width:90%;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:10px;
+}
+
 button{
 background:#e6a000;
 border:none;
@@ -38,6 +47,11 @@ color:#00ffcc;
 font-size:18px;
 }
 
+#videoBox{
+    display:none;
+    margin-top:20px;
+}
+
 </style>
 
 </head>
@@ -50,6 +64,22 @@ font-size:18px;
 <div class="slider">
 
 <img id="slide" src="w1.jpg">
+
+</div>
+<br>
+
+<button onclick="showVideo()">WATCH GAMEPLAY</button>
+
+<div id="videoBox">
+
+<video autoplay muted loop playsinline controls>
+    <source src="gameplay2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<br>
+
+<button onclick="hideVideo()">HIDE VIDEO</button>
 
 </div>
 
@@ -78,8 +108,20 @@ document.getElementById("slide").src=slike[i];
 
 },3000);
 
-</script>
+function showVideo(){
 
+    document.getElementById("videoBox").style.display="block";
+
+}
+
+
+function hideVideo(){
+
+    document.getElementById("videoBox").style.display="none";
+
+}
+
+</script>
 
 <div class="buy">
 

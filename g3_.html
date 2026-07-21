@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Knight Adventure</title>
+
+<style>
+
+body{
+    background:#111;
+    color:white;
+    font-family:Arial;
+    text-align:center;
+    margin:0;
+    padding:20px;
+}
+
+h1{
+    margin-bottom:20px;
+}
+
+.slider img{
+    width:600px;
+    max-width:90%;
+    height:200px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+video{
+    width:300px;
+    max-width:90%;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:10px;
+}
+
+button{
+    background:#e6a000;
+    color:white;
+    border:none;
+    padding:12px 40px;
+    font-size:20px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ffbf00;
+}
+
+.buy{
+    margin-top:30px;
+}
+
+a{
+    color:#00ffcc;
+    font-size:18px;
+    text-decoration:none;
+}
+
+#videoBox{
+    display:none;
+    margin-top:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Runner Knight</h1>
+
+<div class="slider">
+    <img id="slide" src="r1.jpg">
+</div>
+
+<br>
+
+<button onclick="showVideo()">WATCH GAMEPLAY</button>
+
+<div id="videoBox">
+
+<video autoplay muted loop playsinline controls>
+    <source src="gameplay.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<br>
+
+<button onclick="hideVideo()">HIDE VIDEO</button>
+
+</div>
+
+
+<script>
+
+let slike=[
+"r1.jpg",
+"r2.jpg",
+"r3.jpg",
+"r4.jpg",
+"r5.jpg"
+];
+
+let i=0;
+
+setInterval(function(){
+
+    i++;
+
+    if(i>=slike.length){
+        i=0;
+    }
+
+    document.getElementById("slide").src=slike[i];
+
+},3000);
+
+
+function showVideo(){
+
+    document.getElementById("videoBox").style.display="block";
+
+}
+
+
+function hideVideo(){
+
+    document.getElementById("videoBox").style.display="none";
+
+}
+
+</script>
+
+
+<div class="buy">
+
+<a href="https://marko123456.itch.io/woodydung" target="_blank">
+<button>BUY GAME</button>
+</a>
+
+</div>
+
+<br><br>
+
+<a href="index.html">⬅ Back to games</a>
+
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Knight Adventure</title>
+
+<style>
+body{
+background:#111;
+color:white;
+font-family:Arial;
+text-align:center;
+}
+
+.slider img{
+width:600px;
+max-width:90%;
+height:200px;
+object-fit:cover;
+border-radius:10px;
+}
+
+button{
+background:#e6a000;
+border:none;
+padding:12px 40px;
+font-size:20px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.buy{
+margin-top:30px;
+}
+
+a{
+color:#00ffcc;
+font-size:18px;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<h1>Knight Adventure</h1>
+
+<div class="slider">
+
+<img id="slide" src="w1.jpg">
+
+</div>
+
+
+<script>
+
+let slike=[
+"w1.jpg",
+"w2.jpg",
+"w3.jpg",
+"w4.jpg",
+"w5.jpg"
+];
+
+let i=0;
+
+setInterval(function(){
+
+i++;
+
+if(i>=slike.length){
+i=0;
+}
+
+document.getElementById("slide").src=slike[i];
+
+},3000);
+
+</script>
+
+
+<div class="buy">
+
+<a href="https://marko123456.itch.io/woodydung">
+<button>BUY GAME</button>
+</a>
+
+</div>
+
+
+<br><br>
+
+<a href="index.html">Back to games</a>
+
+
+</body>
+</html>

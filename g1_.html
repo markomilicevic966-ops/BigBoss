@@ -21,9 +21,49 @@ body{
     padding:20px;
 }
 
-/* NOVO - OKVIR ZA SLIDESHOW */
+
+/* ABOUT THE GAME */
+
+.about-frame{
+
+    background-image:url("card.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    max-width:650px;
+    margin:20px auto;
+
+    padding:20px;
+
+    border-radius:15px;
+    border:2px solid gold;
+
+    box-shadow:0 0 20px rgba(0,0,0,0.6);
+
+}
+
+
+.about-frame h2{
+
+    color:#e6a000;
+
+}
+
+
+.about-frame p{
+
+    font-size:18px;
+    line-height:1.6;
+
+}
+
+
+
+/* SLIDESHOW */
 
 .slider-frame{
+
     background-image:url("card.png");
     background-size:cover;
     background-position:center;
@@ -34,26 +74,36 @@ body{
     border-radius:15px;
     border:2px solid gold;
     box-shadow:0 0 20px rgba(0,0,0,0.6);
+
 }
 
+
 .slider img{
+
     width:600px;
     max-width:90%;
     height:200px;
     object-fit:cover;
     border-radius:10px;
+
 }
 
+
+
 video{
+
     width:350px;
     max-width:90%;
     height:auto;
     display:block;
     margin:auto;
     border-radius:10px;
+
 }
 
+
 .video-frame{
+
     background-image:url("card.png");
     background-size:cover;
     background-position:center;
@@ -64,9 +114,13 @@ video{
     border-radius:15px;
     border:2px solid gold;
     box-shadow:0 0 20px rgba(0,0,0,0.6);
+
 }
 
+
+
 button{
+
     background:#e6a000;
     color:white;
     border:none;
@@ -74,109 +128,198 @@ button{
     font-size:20px;
     border-radius:8px;
     cursor:pointer;
+
 }
+
 
 button:hover{
+
     background:#ffbf00;
+
 }
+
 
 .buy{
+
     margin-top:30px;
+
 }
 
+
 a{
+
     color:#00ffcc;
     font-size:18px;
     text-decoration:none;
+
 }
 
+
 #videoBox{
+
     display:none;
     margin-top:20px;
+
 }
+
 
 </style>
 
 </head>
 
+
 <body>
+
 
 <h1>Knight Adventure</h1>
 
-<!-- SAMO OVO JE PROMENJENO -->
 
-<div class="slider-frame">
-    <div class="slider">
-        <img id="slide" src="k1.jpg">
-    </div>
+
+<div class="about-frame">
+
+<h2>About the Game</h2>
+
+<p>
+Knight Adventure is a pixel art platform game where you play as a brave knight exploring dangerous worlds.
+Jump over obstacles, defeat enemies, collect coins and discover new challenges across different levels.
+</p>
+
 </div>
 
+
+
+
+
+<div class="slider-frame">
+
+    <div class="slider">
+
+        <img id="slide" src="k1.jpg">
+
+    </div>
+
+</div>
+
+
+
 <br>
 <br>
+
+
 <button onclick="showVideo()">WATCH GAMEPLAY</button>
+
+
 
 <div id="videoBox">
 
+
     <div class="video-frame">
 
+
         <video autoplay muted loop playsinline controls>
+
             <source src="gameplay3.mp4" type="video/mp4">
+
             Your browser does not support the video tag.
+
         </video>
+
 
     </div>
 
+
     <br><br>
+
 
     <button onclick="hideVideo()">HIDE VIDEO</button>
 
+
 </div>
+
+
+
+
 
 <script>
 
+
 let slike=[
+
 "k1.jpg",
 "k2.jpg",
 "k3.jpg",
 "k4.jpg",
 "k5.jpg"
+
 ];
+
 
 let i=0;
 
+
 setInterval(function(){
+
 
     i++;
 
+
     if(i>=slike.length){
+
         i=0;
+
     }
+
 
     document.getElementById("slide").src=slike[i];
 
+
 },3000);
 
+
+
+
 function showVideo(){
+
     document.getElementById("videoBox").style.display="block";
+
 }
 
+
+
+
 function hideVideo(){
+
     document.getElementById("videoBox").style.display="none";
+
 }
+
 
 </script>
 
+
+
+
+
 <div class="buy">
 
+
 <a href="https://marko123456.itch.io/knight" target="_blank">
-    <button>BUY 99 RSD (0.99$)</button>
+
+<button>BUY 99 RSD (0.99$)</button>
+
 </a>
+
 
 </div>
 
+
+
 <br><br>
 
-<a href="index.html">⬅ Back to games</a>
+
+<a href="games.html">⬅ Back to games</a>
+
+
 
 </body>
 </html>

@@ -1,27 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Knight Adventure</title>
 
 <style>
+
 body{
-background:#111;
-color:white;
-font-family:Arial;
-text-align:center;
+    background-image:url("background.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    color:white;
+    font-family:Arial;
+    text-align:center;
+    margin:0;
+    padding:20px;
+}
+
+/* NOVO - OKVIR ZA SLIDESHOW */
+
+.slider-frame{
+    background-image:url("card.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:inline-block;
+    padding:15px;
+    border-radius:15px;
+    border:2px solid gold;
+    box-shadow:0 0 20px rgba(0,0,0,0.6);
 }
 
 .slider img{
-width:600px;
-max-width:90%;
-height:200px;
-object-fit:cover;
-border-radius:10px;
+    width:600px;
+    max-width:90%;
+    height:200px;
+    object-fit:cover;
+    border-radius:10px;
 }
 
 video{
-    width:300px;
+    width:350px;
     max-width:90%;
     height:auto;
     display:block;
@@ -29,22 +53,41 @@ video{
     border-radius:10px;
 }
 
+.video-frame{
+    background-image:url("card.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:inline-block;
+    padding:15px;
+    border-radius:15px;
+    border:2px solid gold;
+    box-shadow:0 0 20px rgba(0,0,0,0.6);
+}
+
 button{
-background:#e6a000;
-border:none;
-padding:12px 40px;
-font-size:20px;
-border-radius:8px;
-cursor:pointer;
+    background:#e6a000;
+    color:white;
+    border:none;
+    padding:12px 40px;
+    font-size:20px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ffbf00;
 }
 
 .buy{
-margin-top:30px;
+    margin-top:30px;
 }
 
 a{
-color:#00ffcc;
-font-size:18px;
+    color:#00ffcc;
+    font-size:18px;
+    text-decoration:none;
 }
 
 #videoBox{
@@ -56,34 +99,38 @@ font-size:18px;
 
 </head>
 
-
 <body>
 
 <h1>Knight Adventure</h1>
 
-<div class="slider">
+<!-- SAMO OVO JE PROMENJENO -->
 
-<img id="slide" src="k1.jpg">
-
+<div class="slider-frame">
+    <div class="slider">
+        <img id="slide" src="k1.jpg">
+    </div>
 </div>
+
+<br>
 <br>
 <button onclick="showVideo()">WATCH GAMEPLAY</button>
 
 <div id="videoBox">
 
-<video autoplay muted loop playsinline controls>
-    <source src="gameplay3.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+    <div class="video-frame">
 
-<br>
+        <video autoplay muted loop playsinline controls>
+            <source src="gameplay3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
 
-<button onclick="hideVideo()">HIDE VIDEO</button>
+    </div>
+
+    <br><br>
+
+    <button onclick="hideVideo()">HIDE VIDEO</button>
 
 </div>
-
-
-
 
 <script>
 
@@ -99,45 +146,37 @@ let i=0;
 
 setInterval(function(){
 
-i++;
+    i++;
 
-if(i>=slike.length){
-i=0;
-}
+    if(i>=slike.length){
+        i=0;
+    }
 
-document.getElementById("slide").src=slike[i];
+    document.getElementById("slide").src=slike[i];
 
 },3000);
 
 function showVideo(){
-
     document.getElementById("videoBox").style.display="block";
-
 }
 
-
 function hideVideo(){
-
     document.getElementById("videoBox").style.display="none";
-
 }
 
 </script>
 
-
 <div class="buy">
 
-<a href="https://marko123456.itch.io/knight">
-<button>BUY GAME</button>
+<a href="https://marko123456.itch.io/knight" target="_blank">
+    <button>BUY 99 RSD (0.99$)</button>
 </a>
 
 </div>
 
-
 <br><br>
 
-<a href="index.html">Back to games</a>
-
+<a href="index.html">⬅ Back to games</a>
 
 </body>
 </html>

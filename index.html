@@ -1,81 +1,186 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Games</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BigBoss Games</title>
+
 <style>
+
 body{
-    background:#111;
+    background-image:url("background.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
     color:white;
     font-family:Arial;
     text-align:center;
-}
-
-.container{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    flex-wrap:wrap;
-}
-
-.game{
-    background:#222;
+    margin:0;
     padding:20px;
-    width:280px;
-    border-radius:10px;
 }
 
-.game img{
-    width:250px;
-    height:250px;
-    object-fit:cover;
+
+.logo{
+    margin-top:80px;
+    font-size:50px;
+    text-shadow:0 0 15px black;
 }
+
+
+.box{
+
+    background-image:url("card.png");
+    background-size:cover;
+    background-position:center;
+
+    max-width:650px;
+    margin:40px auto;
+
+    padding:35px;
+
+    border-radius:15px;
+    border:2px solid gold;
+
+    box-shadow:0 0 25px rgba(0,0,0,0.8);
+}
+
+
+.box h2{
+    color:#e6a000;
+    font-size:30px;
+}
+
+
+.box p{
+
+    font-size:20px;
+    line-height:1.6;
+
+}
+
+
+.hero-image{
+
+    width:300px;
+    max-width:90%;
+
+    border-radius:10px;
+
+}
+
 
 button{
+
     background:#e6a000;
+
     border:none;
-    padding:12px 30px;
-    font-size:18px;
+
+    padding:15px 40px;
+
+    font-size:22px;
+
     cursor:pointer;
+
     border-radius:8px;
+
 }
 
-a{
-    text-decoration:none;
-    color:white;
+
+button:hover{
+
+    background:#ffc400;
+
 }
+
+
+a{
+
+    text-decoration:none;
+
+    color:white;
+
+}
+
+
+.footer{
+
+    margin-top:50px;
+
+    font-size:14px;
+
+    opacity:0.8;
+
+}
+
+
 </style>
+
 </head>
+
 
 <body>
 
-<h1>My Games</h1>
 
-<div class="container">
 
-<div class="game">
-<h2>Knight Adventure</h2>
-<img src="Knight.jpg">
-<br><br>
-<a href="g1_.html"><button>BUY</button></a>
+<h1 class="logo">
+BigBoss Games
+</h1>
+
+
+
+<div class="box">
+
+
+<img class="hero-image" src="Knight.jpg">
+
+
+<h2>Welcome to BigBoss Games</h2>
+
+
+<p>
+
+Independent game developer creating unique adventures,
+pixel worlds and challenging experiences for players around the world.
+
+</p>
+
+
+<p>
+
+Every game is created with passion, creativity and the goal
+to bring fun memories to gamers.
+
+</p>
+
+
+<br>
+
+
+<a href="games.html">
+
+<button>
+GO TO GAMES
+</button>
+
+</a>
+
+
 </div>
 
-<div class="game">
-<h2>WoodyDung</h2>
-<img src="WoodyDung.jpg">
-<br><br>
-<a href="g2_.html"><button>BUY</button></a>
+
+
+<div class="footer">
+
+© 2026 BigBoss Games
+
 </div>
 
 
-<div class="game">
-<h2>RunnerKnight</h2>
-<img src="RunnerKnight.jpg">
-<br><br>
-<a href="g3_.html"><button>BUY</button></a>
-</div>
-
-</div>
 
 </body>
+
 </html>
